@@ -12,9 +12,9 @@
   <div class="content">
     <h1>owainxyz</h1>
     <p>
-      This site is used to store my projects and update people along the way;<br>
-      previously, I used this site to store fun side projects that never worked out,<br>
-      this site will be used to show them off
+      This site is used to show what I'm working on;<br>
+      right now that's <a href="https://github.com/owainxyz/uncord">uncord</a>, a terminal discord client,<br>
+      and the <a href="https://github.com/sgtaziz/lian-li-linux">lian-li-linux</a> nix flake, now merged upstream
     </p>
     <p class="leave">If you would like to leave, please click <a href="https://duckduckgo.com">here</a>.</p>
   </div>
@@ -42,18 +42,18 @@
       var toggle = document.getElementById('theme-toggle');
       var stored = localStorage.getItem('theme');
 
-      if (stored === 'dark') {
-        root.setAttribute('data-theme', 'dark');
+      if (stored === 'light') {
+        root.setAttribute('data-theme', 'light');
       }
 
       toggle.addEventListener('click', function () {
-        var isDark = root.getAttribute('data-theme') === 'dark';
-        if (isDark) {
+        var isLight = root.getAttribute('data-theme') === 'light';
+        if (isLight) {
           root.removeAttribute('data-theme');
-          localStorage.setItem('theme', 'light');
-        } else {
-          root.setAttribute('data-theme', 'dark');
           localStorage.setItem('theme', 'dark');
+        } else {
+          root.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
         }
       });
     })();
